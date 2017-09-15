@@ -1,0 +1,42 @@
+<ion-view title="Calculadora" id="page2">
+  <ion-content padding="true" class="has-header">
+    <h3 id="calculadora-heading2" style="color:#000000;font-weight:300;">Ingrese Datos</h3>
+    <form id="calculadora-form2" class="list">
+      <label class="item item-select" id="calculadora-select3">
+        <span class="input-label">Tipo</span>
+        <select ng-model='calculo.tipo'>
+            <option>Planilla</option>
+            <option>Recibos por honorarios</option>
+        </select>
+      </label>
+      <ion-radio id="calculadora-radio2">Tarifa Base</ion-radio>
+      <label class="item item-select" id="calculadora-input2">
+        <span class="input-label">Horas Trabajadas</span>
+        <select ng-model='calculo.tipo'>
+            <option>Planilla</option>
+            <option>Recibos por honorarios</option>
+        </select>
+      </label>
+      <label class="item item-select" id="calculadora-select2">
+        <span class="input-label">Tipo de moneda</span>
+        <select></select>
+      </label>
+      <label class="item item-input" id="calculadora-input3">
+        <span class="input-label">Tarifa / Hora</span>
+        <input type="text" placeholder="">
+      </label>
+    </form>
+    <button id="calculadora-button1" class="button button-positive button-block">Calcular</button>
+    <h3 id="calculadora-heading1" style="color:#000000;font-weight:300;">Resultados</h3>
+    <ion-list id="calculadora-list4">
+      <ion-item id="calculadora-list-item11">Sueldo Mensual</ion-item>
+      <ion-item id="calculadora-list-item12">Bono Produccion</ion-item>
+      <ion-item id="calculadora-list-item13">Bono Interpretia</ion-item>
+      <ion-item id="calculadora-list-item14">Gratificaciones</ion-item>
+      <ion-item id="calculadora-list-item15">Vacaciones</ion-item>
+      <ion-item id="calculadora-list-item16">Sub Dana</ion-item>
+      <ion-item id="calculadora-list-item17">Utilidades</ion-item>
+      <ion-item id="calculadora-list-item18">Tarifa Real</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
