@@ -5,6 +5,19 @@ angular.module('app.controllers', [])
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
 
+	console.log('datoooo...')
+
+	$scope.calcular=function(data){
+
+			console.log(data)
+
+			$scope.sueldomensual = data.tarifahora*data.horas
+
+
+	}
+
+
+
 
 }])
    

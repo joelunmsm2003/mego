@@ -10,8 +10,11 @@
         </select>
       </label>
      
-      <label class="item item-select" id="calculadora-input2">
-        <span class="input-label">Tarifa Base</span>
+
+
+
+       <label class="item item-select" id="calculadora-input2">
+        <span class="input-label">Nivel</span>
         <select ng-model='calculo.nivel'>
                   <option>CSA S/10.00</option>
                   <option>CSI $3.30</option>
@@ -20,23 +23,25 @@
         </select>
       </label>
 
-
-                
-
-
-      <label class="item item-select" id="calculadora-select2">
-        <span class="input-label">Tipo de moneda</span>
-        <select></select>
-      </label>
       <label class="item item-input" id="calculadora-input3">
         <span class="input-label">Tarifa / Hora</span>
-        <input type="text" placeholder="">
+        <input type="text" placeholder="" ng-model='calculo.tarifahora'>
       </label>
+
+      <label class="item item-input" id="calculadora-input3">
+        <span class="input-label">Horas Trabajadas</span>
+        <input type="text" placeholder="" ng-model='calculo.horas'>
+      </label>
+
+
+
     </form>
-    <button id="calculadora-button1" class="button button-positive button-block">Calcular</button>
+    <button id="calculadora-button1" class="button button-positive button-block" ng-click='calcular(calculo)'>Calcular</button>
+
+
     <h3 id="calculadora-heading1" style="color:#000000;font-weight:300;">Resultados</h3>
     <ion-list id="calculadora-list4">
-      <ion-item id="calculadora-list-item11">Sueldo Mensual</ion-item>
+      <ion-item id="calculadora-list-item11">Sueldo Mensual <span style='float:right;'>{{sueldomensual}}</span></ion-item>
       <ion-item id="calculadora-list-item12">Bono Produccion</ion-item>
       <ion-item id="calculadora-list-item13">Bono Interpretia</ion-item>
       <ion-item id="calculadora-list-item14">Gratificaciones</ion-item>
