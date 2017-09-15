@@ -3,20 +3,27 @@
     <h3 id="calculadora-heading2" style="color:#000000;font-weight:300;">Ingrese Datos</h3>
     <form id="calculadora-form2" class="list">
       <label class="item item-select" id="calculadora-select3">
-        <span class="input-label">Tipo</span>
-        <select ng-model='calculo.tipo'>
+        <span class="input-label">Regimen</span>
+        <select ng-model='calculo.regimen'>
             <option>Planilla</option>
             <option>Recibos por honorarios</option>
         </select>
       </label>
-      <ion-radio id="calculadora-radio2">Tarifa Base</ion-radio>
+     
       <label class="item item-select" id="calculadora-input2">
-        <span class="input-label">Horas Trabajadas</span>
-        <select ng-model='calculo.tipo'>
-            <option>Planilla</option>
-            <option>Recibos por honorarios</option>
+        <span class="input-label">Tarifa Base</span>
+        <select ng-model='calculo.nivel'>
+                  <option>CSA S/10.00</option>
+                  <option>CSI $3.30</option>
+                  <option>MSI $3.50 </option>
+                  <option>VRI $3.75</option>
         </select>
       </label>
+
+
+                
+
+
       <label class="item item-select" id="calculadora-select2">
         <span class="input-label">Tipo de moneda</span>
         <select></select>
