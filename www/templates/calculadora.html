@@ -1,12 +1,12 @@
-<ion-view title="Calculadora" id="page2">
+<ion-view title="Calculadora Interpetria" id="page2">
   <ion-content padding="true" class="has-header">
     <h3 id="calculadora-heading2" style="color:#000000;font-weight:300;">Ingrese Datos</h3>
-    <form id="calculadora-form2" class="list">
+    <form id="calculadora-form2" class="list" ng-submit='calcular(calculo)'>
       <label class="item item-select" id="calculadora-select3">
         <span class="input-label">Regimen</span>
-        <select ng-model='calculo.regimen'>
-            <option>Planilla</option>
-            <option>Recibos por honorarios</option>
+        <select ng-model='calculo.regimen' required>
+            <option value='1'>Planilla</option>
+            <option value='2'>Recibos por honorarios</option>
         </select>
       </label>
      
@@ -14,41 +14,46 @@
 
 
        <label class="item item-select" id="calculadora-input2">
-        <span class="input-label">Nivel</span>
-        <select ng-model='calculo.nivel'>
-                  <option>CSA S/10.00</option>
-                  <option>CSI $3.30</option>
-                  <option>MSI $3.50 </option>
-                  <option>VRI $3.75</option>
+        <span class="input-label">Categoria</span>
+        <select ng-model='calculo.nivel' ng-change='calculo.tarifahora=calculo.nivel' required>
+                  <option value='10'>CSA S/10.00</option>
+                  <option value='3.3'>CSI $3.30</option>
+                  <option value='3.5'>MSI $3.50</option>
+                  <option value='3.75'>VRI $3.75</option>
         </select>
       </label>
 
+
+
+
       <label class="item item-input" id="calculadora-input3">
         <span class="input-label">Tarifa / Hora</span>
-        <input type="text" placeholder="" ng-model='calculo.tarifahora'>
+        <input disabled type="text" placeholder="" ng-model='calculo.tarifahora' required>
       </label>
 
-      <label class="item item-input" id="calculadora-input3">
+         <label class="item item-input" id="calculadora-input3">
         <span class="input-label">Horas Trabajadas</span>
-        <input type="text" placeholder="" ng-model='calculo.horas'>
+        <input type="number" placeholder="" ng-model='calculo.horas'>
       </label>
 
 
+   
+         <button type='submit' id="calculadora-button1" class="button button-positive button-block" >Calcular</button>
 
     </form>
-    <button id="calculadora-button1" class="button button-positive button-block" ng-click='calcular(calculo)'>Calcular</button>
+ 
 
 
-    <h3 id="calculadora-heading1" style="color:#000000;font-weight:300;">Resultados</h3>
+   <!--  <h3 id="calculadora-heading1" style="color:#000000;font-weight:300;">Resultados en {{moneda}}</h3>
     <ion-list id="calculadora-list4">
-      <ion-item id="calculadora-list-item11">Sueldo Mensual <span style='float:right;'>{{sueldomensual}}</span></ion-item>
-      <ion-item id="calculadora-list-item12">Bono Produccion</ion-item>
-      <ion-item id="calculadora-list-item13">Bono Interpretia</ion-item>
-      <ion-item id="calculadora-list-item14">Gratificaciones</ion-item>
-      <ion-item id="calculadora-list-item15">Vacaciones</ion-item>
-      <ion-item id="calculadora-list-item16">Sub Dana</ion-item>
-      <ion-item id="calculadora-list-item17">Utilidades</ion-item>
-      <ion-item id="calculadora-list-item18">Tarifa Real</ion-item>
-    </ion-list>
+      <ion-item id="calculadora-list-item11">Sueldo Mensual {{sueldomensual}}</ion-item>
+      <ion-item id="calculadora-list-item12">Bono Produccion {{bonoproduccion}}</ion-item>
+      <ion-item id="calculadora-list-item13">Bono Interpretia{{bonointerpetria}}</ion-item>
+      <ion-item id="calculadora-list-item14">Gratificaciones{{gratificacion}}</ion-item>
+      <ion-item id="calculadora-list-item15">Vacaciones{{vacaciones}}</ion-item>
+      <ion-item id="calculadora-list-item16">Sub Dana{{subdana}}</ion-item>
+      <ion-item id="calculadora-list-item17">Utilidades{{utilidades}}</ion-item>
+      <ion-item id="calculadora-list-item18">Tarifa Real{{tarifareal}}</ion-item>
+    </ion-list> -->
   </ion-content>
 </ion-view>
