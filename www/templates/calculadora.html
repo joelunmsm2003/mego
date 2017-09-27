@@ -1,6 +1,6 @@
 <ion-view title="Calculadora Interpetria" id="page2">
   <ion-content padding="true" class="has-header">
-    <h3 id="calculadora-heading2" style="color:#000000;font-weight:300;">Ingrese Datos</h3>
+    <h3 id="calculadora-heading2" style="color:#000000;">Ingrese Datos</h3>
     <form id="calculadora-form2" class="list" ng-submit='calcular(calculo)'>
       <label class="item item-select" id="calculadora-select3">
         <span class="input-label">Regimen</span>
@@ -28,12 +28,19 @@
 
       <label class="item item-input" id="calculadora-input3">
         <span class="input-label">Tarifa / Hora</span>
-        <input disabled type="text" placeholder="" ng-model='calculo.tarifahora' required>
+        <input disabled type="text" placeholder="" style='text-align:right !important;'  ng-model='calculo.tarifahora' required>
       </label>
+
+
+        <label class="item item-input" id="miPerfil-input58">
+        <span class="input-label">Meta Requerida  </span>
+        <input ng-model='agente.meta_requerida' placeholder="" disabled type="text">
+      </label>
+
 
          <label class="item item-input" id="calculadora-input3">
         <span class="input-label">Horas Trabajadas</span>
-        <input type="number" placeholder="" ng-model='calculo.horas'>
+        <input type="number" placeholder="" style='text-align:right !important;' required ng-model='calculo.horas'>
       </label>
 
 
