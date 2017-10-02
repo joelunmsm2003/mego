@@ -1,0 +1,15 @@
+{
+  "short_name": "Calculadora Interpetria",
+  "name": "Capital",
+  "icons": [
+    {
+      "src":"img/favicon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#blue",
+  "theme_color": "#00699a",
+  "display": "standalone"
+}
