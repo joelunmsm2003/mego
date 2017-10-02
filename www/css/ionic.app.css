@@ -3577,7 +3577,7 @@ cite {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #000;
+  color: #fff;
   font-weight: 500;
   font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
@@ -3634,7 +3634,8 @@ h3, .h3 {
   font-size: 24px; }
 
 h4, .h4 {
-  font-size: 18px; }
+  font-size: 23px;
+text-align: center; }
 
 h5, .h5 {
   font-size: 14px; }
@@ -3915,7 +3916,7 @@ a.subdued {
     background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
     color: #444; }
     .bar.bar-stable .title {
-      color: #444; }
+      color: #0078f7; }
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
   .bar.bar-positive {
@@ -3991,6 +3992,7 @@ a.subdued {
     overflow: hidden;
     margin: 0 10px;
     min-width: 30px;
+    color: #0078f7;
     height: 43px;
     text-align: center;
     text-overflow: ellipsis;
@@ -4114,7 +4116,7 @@ a.subdued {
     border-color: transparent;
     background: none;
     box-shadow: none;
-    color: #444;
+    color: #0078f7;
     font-size: 17px; }
   .bar-stable .button.button-icon {
     border-color: transparent;
@@ -5681,9 +5683,9 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
  * --------------------------------------------------
  */
 .item {
-  border-color: #ddd;
-  background-color: #fff;
-  color: #444;
+  border-color: #83b7ef;
+  /*background-color: #fff;*/
+  color: #fff;
   position: relative;
   z-index: 2;
   display: block;
@@ -7650,7 +7652,7 @@ textarea {
   padding: 7px 10px 7px 0px;
   max-width: 200px;
   width: 35%;
-  color: #444;
+  color: #fff;
   font-size: 16px; }
 
 .placeholder-icon {
@@ -7725,7 +7727,7 @@ input[type="color"] {
   padding-top: 2px;
   padding-left: 0;
   height: 34px;
-  color: #111;
+  color: #fff;
   vertical-align: middle;
   font-size: 14px;
   line-height: 16px; }
@@ -7819,7 +7821,7 @@ textarea[disabled],
 input[readonly]:not(.cloned-text-input),
 textarea[readonly]:not(.cloned-text-input),
 select[readonly] {
-  background-color: #f8f8f8;
+  background-color:none;
   cursor: not-allowed; }
 
 input[type="radio"][disabled],
@@ -8472,8 +8474,8 @@ input:checked + .checkbox-icon:after {
     padding: 0 48px 0 16px;
     max-width: 65%;
     border: none;
-    background: #fff;
-    color: #333;
+    background: none;
+    color: #fff;
     text-indent: .01px;
     text-overflow: '';
     white-space: nowrap;
@@ -8664,8 +8666,8 @@ progress {
         color: #fff; }
   .button.button-positive {
     border-color: transparent;
-    background-color: #387ef5;
-    color: #fff; }
+    background-color: #fff;
+    color: #387ef5; }
     .button.button-positive:hover {
       color: #fff;
       text-decoration: none; }
@@ -9806,10 +9808,17 @@ body.platform-ios {
   font-family: Lato, sans-serif; }
 
 body.platform-android {
-  font-family: Lato, sans-serif; }
+  font-family: Lato, sans-serif;
+  background: #234;
+   }
 
 .ionic-body.platform-android {
   font-family: Lato, sans-serif; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .tab-item, input, button, select, textarea {
   font-family: inherit; }
+
+ion-content{
+
+  background: #0078f7;
+}
