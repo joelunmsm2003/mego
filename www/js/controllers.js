@@ -54,6 +54,8 @@ function ($scope, $stateParams,$ionicModal) {
 
 			$scope.sueldomensual = data.tarifahora*data.horas
 
+			$scope.sueldomensualmuestra = $scope.sueldomensual.toFixed(2)
+
 			$scope.tr = $scope.tr + $scope.sueldomensual
 
 			$scope.gat =  $scope.sueldomensual
